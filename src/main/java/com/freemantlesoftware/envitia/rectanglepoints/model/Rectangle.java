@@ -1,4 +1,4 @@
-package com.freemantlesoftware.envitia.task.model;
+package com.freemantlesoftware.envitia.rectanglepoints.model;
 
 /**
  * Simple representation of a Rectangle.

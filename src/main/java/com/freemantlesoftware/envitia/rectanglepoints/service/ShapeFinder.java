@@ -1,8 +1,8 @@
-package com.freemantlesoftware.envitia.task.service;
+package com.freemantlesoftware.envitia.rectanglepoints.service;
 
-import com.freemantlesoftware.envitia.task.model.Point2D;
-import com.freemantlesoftware.envitia.task.model.Rectangle;
-import com.freemantlesoftware.envitia.task.model.validation.RectangleValidator;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Point2D;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Rectangle;
+import com.freemantlesoftware.envitia.rectanglepoints.model.validation.RectangleValidator;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,7 +26,7 @@ public class ShapeFinder {
      * @param pointsInShape a set of points that define a shape.
      * @return A single rectangle object if found, otherwise empty.
      */
-    public Optional<Rectangle> findRectangle(Set<Point2D> pointsInShape) {
+    public Optional<Rectangle> findRectangle(final Set<Point2D> pointsInShape) {
 
         if (pointsInShape == null || pointsInShape.isEmpty()) {
             return Optional.empty();

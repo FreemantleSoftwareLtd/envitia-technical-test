@@ -1,4 +1,4 @@
-package com.freemantlesoftware.envitia.task.investigation;
+package com.freemantlesoftware.envitia.rectanglepoints.investigation;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
