@@ -1,5 +1,8 @@
 Envitia Coding Task
 -------------------
+Note that the 'core' service in this project is BoundaryDetectionService (com.freemantlesoftware.examples.service.BoundaryDetectionService) and it's working is demonstrated via the Junit Test
+PointInRectangleTest (com.freemantlesoftware.examples.service.PointInRectangleTest).
+
 Note that this solution is deliberately split into components to help demonstrate how it could be made more adaptable.
 
 
