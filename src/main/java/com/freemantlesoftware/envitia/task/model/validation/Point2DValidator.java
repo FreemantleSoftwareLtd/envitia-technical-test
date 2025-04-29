@@ -1,4 +1,4 @@
-package com.freemantlesoftware.examples.model.validation;
+package com.freemantlesoftware.envitia.task.model.validation;
 
 /**
  * Validates a Point2D object.

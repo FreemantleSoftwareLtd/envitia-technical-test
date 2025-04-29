@@ -1,7 +1,7 @@
-package com.freemantlesoftware.examples.service;
+package com.freemantlesoftware.envitia.task.service;
 
-import com.freemantlesoftware.examples.model.Point2D;
-import com.freemantlesoftware.examples.model.Rectangle;
+import com.freemantlesoftware.envitia.task.model.Point2D;
+import com.freemantlesoftware.envitia.task.model.Rectangle;
 
 import java.util.Set;
 

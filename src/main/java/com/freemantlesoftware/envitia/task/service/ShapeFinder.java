@@ -1,8 +1,8 @@
-package com.freemantlesoftware.examples.service;
+package com.freemantlesoftware.envitia.task.service;
 
-import com.freemantlesoftware.examples.model.Point2D;
-import com.freemantlesoftware.examples.model.Rectangle;
-import com.freemantlesoftware.examples.model.validation.RectangleValidator;
+import com.freemantlesoftware.envitia.task.model.Point2D;
+import com.freemantlesoftware.envitia.task.model.Rectangle;
+import com.freemantlesoftware.envitia.task.model.validation.RectangleValidator;
 
 import java.util.Arrays;
 import java.util.Collections;
