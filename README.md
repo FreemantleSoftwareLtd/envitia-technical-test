@@ -1,6 +1,6 @@
 Envitia Coding Task
 -------------------
-Note that this solution is deliberately split into components to demonstrate how it could be made more generic.
+Note that this solution is deliberately split into components to help demonstrate how it could be made more adaptable.
 
 
 Point in Rectangle
