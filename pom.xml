@@ -4,7 +4,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.freemantlesoftware.examples</groupId>
+    <groupId>com.freemantlesoftware.envitia</groupId>
     <artifactId>envitia-technical-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
