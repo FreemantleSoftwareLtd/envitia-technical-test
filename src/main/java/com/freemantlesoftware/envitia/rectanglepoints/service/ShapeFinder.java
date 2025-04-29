@@ -26,7 +26,7 @@ public class ShapeFinder {
      * @param pointsInShape a set of points that define a shape.
      * @return A single rectangle object if found, otherwise empty.
      */
-    public Optional<Rectangle> findRectangle(Set<Point2D> pointsInShape) {
+    public Optional<Rectangle> findRectangle(final Set<Point2D> pointsInShape) {
 
         if (pointsInShape == null || pointsInShape.isEmpty()) {
             return Optional.empty();
