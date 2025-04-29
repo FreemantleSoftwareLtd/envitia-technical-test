@@ -1,4 +1,4 @@
-package com.freemantlesoftware.envitia.task.model;
+package com.freemantlesoftware.envitia.rectanglepoints.model;
 
 import java.util.Arrays;
 import java.util.Objects;

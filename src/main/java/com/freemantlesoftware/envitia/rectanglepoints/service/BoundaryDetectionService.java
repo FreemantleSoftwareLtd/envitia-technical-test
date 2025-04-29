@@ -1,8 +1,8 @@
-package com.freemantlesoftware.envitia.task.service;
+package com.freemantlesoftware.envitia.rectanglepoints.service;
 
-import com.freemantlesoftware.envitia.task.model.Point2D;
-import com.freemantlesoftware.envitia.task.model.Rectangle;
-import com.freemantlesoftware.envitia.task.model.validation.Point2DValidator;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Point2D;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Rectangle;
+import com.freemantlesoftware.envitia.rectanglepoints.model.validation.Point2DValidator;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -48,10 +48,9 @@ public class BoundaryDetectionService {
 
             Rectangle rectangle = shapeFinder.findRectangle(pointsInShape).orElse(Rectangle.emptyRectangle());
 
-            if (Rectangle.emptyRectangle() != rectangle
-                    && rectangleBoundaryDetection.hasPointsInsideRectangle(rectangle, pointsInShape)) {
-                return rectangleBoundaryDetection.isInsideRectangle(rectangle, new Point2D(point));
-            }
+            boolean isValidRectangle = Rectangle.emptyRectangle() != rectangle && !rectangleBoundaryDetection.hasPointsInsideRectangle(rectangle, pointsInShape);
+
+            return isValidRectangle && rectangleBoundaryDetection.isPointInsideRectangle(rectangle, new Point2D(point));
 
         } catch (IllegalArgumentException ex) {
             System.out.printf("An exception occurred while trying to process isInsideRectangle. %s%n", ex); // basic logging.

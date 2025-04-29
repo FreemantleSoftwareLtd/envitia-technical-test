@@ -1,7 +1,7 @@
-package com.freemantlesoftware.envitia.task.service;
+package com.freemantlesoftware.envitia.rectanglepoints.service;
 
-import com.freemantlesoftware.envitia.task.model.Point2D;
-import com.freemantlesoftware.envitia.task.model.Rectangle;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Point2D;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Rectangle;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ShapeFinderTest {
 
-    private static Stream<Arguments> pointInRectangle_rectangle_testData() {
+    private static Stream<Arguments> shapeFinder_rectangle_testData() {
         // Argument Order: [Expected Result], [Shape Data]
         return Stream.of(
                 Arguments.of(new Rectangle(-1, -1, 2, 2), Set.of(new Point2D(-1, -1), new Point2D(-1, 1), new Point2D(1, 1), new Point2D(1, -1))), // Envitia Test Set 2
@@ -28,8 +28,8 @@ class ShapeFinderTest {
 
 
     @ParameterizedTest
-    @MethodSource("pointInRectangle_rectangle_testData")
-    void test_findRectangle_rectangle_values_correct(Rectangle expectedResult, Set<Point2D> shapeData) {
+    @MethodSource("shapeFinder_rectangle_testData")
+    void test_shapeFinder_rectangle(Rectangle expectedResult, Set<Point2D> shapeData) {
         // Given
         ShapeFinder shapeFinder = new ShapeFinder();
         // When / Then

@@ -1,7 +1,7 @@
-package com.freemantlesoftware.envitia.task.service;
+package com.freemantlesoftware.envitia.rectanglepoints.service;
 
-import com.freemantlesoftware.envitia.task.model.Point2D;
-import com.freemantlesoftware.envitia.task.model.Rectangle;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Point2D;
+import com.freemantlesoftware.envitia.rectanglepoints.model.Rectangle;
 
 import java.util.Set;
 
@@ -18,9 +18,9 @@ public class RectangleBoundaryDetection {
      * @param point
      * @return true is the given point is within the rectangle, else false
      */
-    public boolean isInsideRectangle(final Rectangle rectangle, final Point2D point) {
-        return (rectangle.width() > Double.MIN_VALUE // is a line.
-                && rectangle.height() > Double.MIN_VALUE
+    public boolean isPointInsideRectangle(final Rectangle rectangle, final Point2D point) {
+        return (rectangle.width() > 0
+                && rectangle.height() > 0
                 && point.getX() > rectangle.x()
                 && point.getY() > rectangle.y()
                 && point.getX() < rectangle.maxX()
@@ -37,7 +37,7 @@ public class RectangleBoundaryDetection {
      * @return true if a given point was found within the rectangle, else false.
      */
     public boolean hasPointsInsideRectangle(final Rectangle rectangle, final Set<Point2D> points) {
-        return points.stream().filter(p -> this.isInsideRectangle(rectangle, p)).findAny().isEmpty();
+        return points.stream().anyMatch(p -> this.isPointInsideRectangle(rectangle, p));
     }
 
 }
