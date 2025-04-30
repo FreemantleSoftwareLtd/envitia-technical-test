@@ -21,23 +21,19 @@ isInsideRectangle(shape: [number, number][], point: [number, number]): boolean
 Input
 -----
 shape - an array of ordered coordinates pairs of the form [x, y] which, when combined, form a coordinate shape (a bit
-like a dot-to-dot
-drawing).
+like a dot-to-dot drawing).
 point - a coordinate pair of the form [x, y]. The provided point will either be inside the shape, outside the shape or
-touching the edge of the
-shape.
+touching the edge of the shape.
 
 Other Considerations
 --------------------
 Points are deemed to be inside the shape if they're fully enclosed by all of the edges. Points which are along the edge
-of the shape are not
-considered to be inside.
+of the shape are not considered to be inside.
 
 If the shape is not a rectangle (or square), isInsideRectangle should return false, even if the point is inside the
 shape.
 Points in the shape array may not always represent the corner of a shape. Rectangles can therefore be represented using
-more than 4
-points.
+more than 4 points.
 
 You can create as many functions as you like to solve the problem.
 

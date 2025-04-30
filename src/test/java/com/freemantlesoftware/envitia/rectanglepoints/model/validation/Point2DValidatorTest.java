@@ -33,5 +33,4 @@ class Point2DValidatorTest {
         IllegalArgumentException result = assertThrows(IllegalArgumentException.class, () -> validator.validate(pointData));
         assertEquals(expectedResult, result.getMessage());
     }
-
 }

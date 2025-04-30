@@ -34,6 +34,4 @@ class RectangleValidatorTest {
         IllegalArgumentException result = assertThrows(IllegalArgumentException.class, () -> validator.validate(x, y, width, height));
         assertEquals(expectedResult, result.getMessage());
     }
-
-
 }
