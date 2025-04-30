@@ -1,5 +1,7 @@
 package com.freemantlesoftware.envitia.rectanglepoints.model.validation;
 
+import com.freemantlesoftware.envitia.rectanglepoints.model.validation.util.ValidationUtils;
+
 /**
  * Validates a Point2D object.
  */
@@ -19,17 +21,8 @@ public class Point2DValidator {
             throw new IllegalArgumentException("Point2D requires two elements (x and y coordinates).");
         }
 
-        if (isNotFinite(coordinates[0]) || isNotFinite(coordinates[1])) {
+        if (ValidationUtils.isNotFinite(coordinates[0]) || ValidationUtils.isNotFinite(coordinates[1])) {
             throw new IllegalArgumentException("Point2D requires argument values to be finite.");
         }
     }
-
-    public void validate(double x, double y) throws IllegalArgumentException {
-        validate(new double[]{x, y});
-    }
-
-    private boolean isNotFinite(double value) {
-        return !Double.isFinite(value);
-    }
-
 }
