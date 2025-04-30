@@ -53,7 +53,7 @@ public class BoundaryDetectionService {
             return isValidRectangle && rectangleBoundaryDetection.isPointInsideRectangle(rectangle, new Point2D(point));
 
         } catch (IllegalArgumentException ex) {
-            System.out.printf("An exception occurred while trying to process isInsideRectangle. %s%n", ex); // basic logging.
+            System.out.printf("An exception occurred while trying to process isInsideRectangle: %s%n", ex); // basic logging.
         }
 
         return false; // Rectangle Not Found.

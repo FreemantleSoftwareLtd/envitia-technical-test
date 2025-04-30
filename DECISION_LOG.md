@@ -31,7 +31,8 @@ DECISIONS
 - This system will not process 'fuzzy' rectangles (assume coordinates for rectangle vertices are on a plane).
 - Use a custom Point or Coordinate object as Java Point2D.Double is a static class as does not allow an array to be
   passed.
-- Use a custom Rectangle Class as Java Rectangle2D.Double does not do what we want (top and left boundary is included in check)
-and existing points cannot be easily checked. Tested with Java Rectangle / Java Rectangle.Double initially but this does not quite provide the
-  functionality required and is not extendable (we could adapt/wrap it but might hit problems later). 
+- Use a custom Rectangle Class as Java Rectangle2D.Double does not do what we want (top and left boundary is included in
+  check) and existing points cannot be easily checked. Tested with Java Rectangle / Java Rectangle.Double initially but this
+  does not quite provide the functionality required and is not extendable (we could adapt/wrap it but might hit problems later).
 - Validation kept simple to ensure that attributes are valid values.
+- Added isNotFinite check as, although this is a negative test, it makes the validators cleaner and more readable.

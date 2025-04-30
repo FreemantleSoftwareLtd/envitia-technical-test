@@ -1,7 +1,7 @@
 Envitia Coding Task
 -------------------
-Note that the 'core' service in this project is 'BoundaryDetectionService.java' (service.com.freemantlesoftware.envitia.rectanglepoints.BoundaryDetectionService) and its working is demonstrated via the JUnit Test
-'PointInRectangleTest.java' (service.com.freemantlesoftware.envitia.rectanglepoints.PointInRectangleTest).
+Note that the 'core' service in this project is 'BoundaryDetectionService.java' (service.com.freemantlesoftware.envitia.rectanglepoints.BoundaryDetectionService)
+and its working is demonstrated via the JUnit Test 'PointInRectangleTest.java' (service.com.freemantlesoftware.envitia.rectanglepoints.PointInRectangleTest).
 
 Note that this solution is deliberately split into components to help demonstrate how it could be made more adaptable.
 

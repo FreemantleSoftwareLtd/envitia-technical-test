@@ -33,28 +33,28 @@ public class ShapeFinder {
         }
 
         // find corners
-        Point2D expectedTopLeft = Collections.min(pointsInShape);
-        Point2D expectedBottomRight = Collections.max(pointsInShape);
-        Point2D expectedTopRight = new Point2D(expectedBottomRight.getX(), expectedTopLeft.getY());
-        Point2D expectedBottomLeft = new Point2D(expectedTopLeft.getX(), expectedBottomRight.getY());
+        Point2D expectedTopLeftCorner = Collections.min(pointsInShape);
+        Point2D expectedBottomRightCorner = Collections.max(pointsInShape);
+        Point2D expectedTopRightCorner = new Point2D(expectedBottomRightCorner.getX(), expectedTopLeftCorner.getY());
+        Point2D expectedBottomLeftCorner = new Point2D(expectedTopLeftCorner.getX(), expectedBottomRightCorner.getY());
         // find width and height
-        double width = expectedTopRight.getX() - expectedTopLeft.getX();
-        double height = expectedBottomLeft.getY() - expectedTopLeft.getY();
+        final double widthOfRectangle = expectedTopRightCorner.getX() - expectedTopLeftCorner.getX();
+        final double heightOfRectangle = expectedBottomLeftCorner.getY() - expectedTopLeftCorner.getY();
 
         try {
-            rectangleValidator.validate(expectedTopLeft.getX(), expectedTopLeft.getY(), width, height);
+            rectangleValidator.validate(expectedTopLeftCorner.getX(), expectedTopLeftCorner.getY(), widthOfRectangle, heightOfRectangle);
 
-            boolean hasAllFourCorners = pointsInShape.containsAll(Arrays.asList(expectedTopLeft,
-                    expectedTopRight,
-                    expectedBottomLeft,
-                    expectedBottomRight));
+            boolean hasAllFourCorners = pointsInShape.containsAll(Arrays.asList(expectedTopLeftCorner,
+                    expectedTopRightCorner,
+                    expectedBottomLeftCorner,
+                    expectedBottomRightCorner));
 
             if (hasAllFourCorners) {
-                return Optional.of(new Rectangle(expectedTopLeft.getX(), expectedTopLeft.getY(), width, height));
+                return Optional.of(new Rectangle(expectedTopLeftCorner.getX(), expectedTopLeftCorner.getY(), widthOfRectangle, heightOfRectangle));
             }
 
         } catch (IllegalArgumentException ex) {
-            System.out.printf("An exception occurred while trying to process findRectangle. %s%n", ex); // basic logging.
+            System.out.printf("An exception occurred while trying to process findRectangle: %s%n", ex); // basic logging.
         }
 
         return Optional.empty();

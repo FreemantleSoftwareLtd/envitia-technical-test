@@ -20,11 +20,11 @@ public class Point2D implements Comparable<Point2D> {
     }
 
     public double getX() {
-        return coordinates[0];
+        return this.coordinates[0];
     }
 
     public double getY() {
-        return coordinates[1];
+        return this.coordinates[1];
     }
 
 
@@ -58,15 +58,15 @@ public class Point2D implements Comparable<Point2D> {
 
     @Override
     public boolean equals(Object that) {
-        if (that == null || getClass() != that.getClass()) {
+        if (that == null || this.getClass() != that.getClass()) {
             return false;
         }
         Point2D point = (Point2D) that;
-        return Objects.deepEquals(coordinates, point.coordinates);
+        return Objects.deepEquals(this.coordinates, point.coordinates);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(coordinates);
+        return Arrays.hashCode(this.coordinates);
     }
 }
