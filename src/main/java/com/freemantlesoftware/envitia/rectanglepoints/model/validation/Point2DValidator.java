@@ -10,7 +10,7 @@ public class Point2DValidator {
     private static final int COORDINATE_ARRAY_SIZE = 2;
 
     /**
-     * Validates a given array to ensure that there are only two elements and that there values are finite.
+     * Validates a given array to ensure that there are only two elements and that their values are finite.
      * Throws IllegalArgumentException if values are invalid.
      *
      * @param coordinates double array with an x and y coordinate.
