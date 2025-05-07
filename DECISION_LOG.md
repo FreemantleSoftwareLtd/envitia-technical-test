@@ -3,12 +3,12 @@ DECISIONS
 - D01:   This system will not process 'fuzzy' rectangles (assume coordinates for rectangle vertices are on a plane).
 - D02:   Use a custom Point or Coordinate object as Java Point2D.Double is a static class as does not allow an array to be
          passed.
-- D03:   Use a custom Rectangle Class as Java Rectangle2D.Double does not do what we want (top and left boundary is included in check)
-         and existing points cannot be easily checked. Tested with Java Rectangle / Java Rectangle.Double initially but this does
-         not quite provide the functionality required and is not extendable (we could adapt/wrap it but might hit problems later).
+- D03:   Use a custom Rectangle class, as Java’s Rectangle2D.Double does not behave as needed (top and left boundaries are included in checks),
+         and existing points cannot be easily verified. We initially tested with Rectangle and Rectangle2D.Double, but they do not quite provide 
+         the required functionality and are not easily extendable (we could adapt/wrap them, but this might lead to problems later).
 - D04:   Validation kept simple to ensure that attributes are valid values.
-- D05    Added isNotFinite check as, although this is a negative test, it makes the validators cleaner and more readable.
-- D06:   For Rectangles the order of the dots is not important as we only need to identify if the dots do not make a rectangle.
+- D05    Added isNotFinite check — even though this is a negative test, it makes the validators cleaner and more readable.
+- D06:   For Rectangles the order of the dots is not important as we only need to identify whether the dots form a valid rectangle.
 
 ASSUMPTIONS
 -----------
@@ -22,7 +22,7 @@ ASSUMPTIONS
 NOTES
 -----
 - Coordinates are combined, form a coordinate shape (a bit like a dot-to-dot drawing) - this means that the order of the
-  coordinates is important and this may draw a polygon that is not a rectangle.
+  coordinates may be important and this may draw a polygon that is not a rectangle.
 - This is for Rectangles but as method defines 'shape', consider possibility of other shapes.
 - Points are deemed to be inside the shape if they're fully enclosed by all of the edges. Points which are along the
   edge of the shape are not considered to be inside.
