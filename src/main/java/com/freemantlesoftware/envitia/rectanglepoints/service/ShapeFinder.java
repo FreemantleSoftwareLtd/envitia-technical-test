@@ -21,7 +21,7 @@ public class ShapeFinder {
     }
 
     /**
-     * Tries to find a rectangle in the given set of points.
+     * Tries to find a rectangle with the given set of points.
      *
      * @param pointsInShape a set of points that define a shape.
      * @return A single rectangle object if found, otherwise empty.
