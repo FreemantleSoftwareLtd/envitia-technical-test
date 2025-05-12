@@ -56,7 +56,7 @@ public class BoundaryDetectionService {
             System.out.printf("An exception occurred while trying to process isInsideRectangle: %s%n", ex); // basic logging.
         }
 
-        return false; // Rectangle Not Found.
+        return false;
     }
 
 
